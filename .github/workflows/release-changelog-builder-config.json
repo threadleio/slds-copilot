@@ -1,0 +1,39 @@
+{
+  "categories": [
+    {
+      "title": "🚀 New Features",
+      "labels": ["feat"],
+      "commits": ["^feat(.*):", "^feat:"]
+    },
+    {
+      "title": "🛠️ Fixes",
+      "labels": ["fix"],
+      "commits": ["^fix(.*):", "^fix:"]
+    },
+    {
+      "title": "🧠 DX / CI Improvements",
+      "labels": ["chore", "ci", "build", "style"],
+      "commits": ["^chore(.*):", "^ci(.*):", "^build(.*):", "^style(.*):"]
+    },
+    {
+      "title": "🧹 Refactors",
+      "labels": ["refactor"],
+      "commits": ["^refactor(.*):"]
+    },
+    {
+      "title": "📝 Docs",
+      "labels": ["docs"],
+      "commits": ["^docs(.*):"]
+    },
+    {
+      "title": "⚠️ Breaking Changes",
+      "labels": ["breaking"],
+      "commits": ["^.*!:", "BREAKING CHANGE"]
+    }
+  ],
+  "ignore_labels": ["wip", "skip-changelog"],
+  "sort": "DESC",
+  "template": "# Changelog for {{version}}\n\n{{CHANGELOG}}\n",
+  "pr_template": "- {{TITLE}}\n   by @{{AUTHOR}} in #{{NUMBER}}",
+  "commit_template": "- {{MESSAGE}} ({{SHA}})"
+}
