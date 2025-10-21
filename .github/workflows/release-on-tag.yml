@@ -45,8 +45,6 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v5
         with:
           configuration: .github/release-changelog-builder-config.json
-          fromTag: ${{ github.event.before }} # fallback, ale action i tak znajdzie poprzedni tag
-          toTag: ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -61,3 +59,7 @@ jobs:
           prerelease: ${{ contains(github.ref, '-beta') || contains(github.ref, '-rc') }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Debug changelog
+        run: echo "${{ steps.notes.outputs.changelog }}"
+
