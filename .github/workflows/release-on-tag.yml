@@ -62,4 +62,3 @@ jobs:
 
       - name: Debug changelog
         run: echo "${{ steps.notes.outputs.changelog }}"
-
