@@ -1,8 +1,15 @@
+import ExplanationPanel from "@/components/ExplanationPanel";
 import HtmlOutput from "@/components/HtmlOutput";
 import PreviewFrame from "@/components/PreviewFrame";
-import ExplanationPanel from "@/components/ExplanationPanel";
+import type { GenerationResult } from "@/types/types";
 
-export default function ResultTabs({ result, loading }: { result: any; loading?: boolean }) {
+export default function ResultTabs({
+  result,
+  loading,
+}: {
+  result: GenerationResult | null;
+  loading?: boolean;
+}) {
   if (loading) return <div className="bg-white rounded-xl p-6 shadow">Analizuję Twój opis…</div>;
   if (!result)
     return (

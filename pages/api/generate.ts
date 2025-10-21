@@ -40,27 +40,62 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     result: {
       summary: "Karta z obrazkiem po lewej (media object) i przyciskiem",
       patterns: [
-        { id: "media_object", label: "Media Object", confidence: 0.92, why: "Obrazek po lewej i treść po prawej" },
-        { id: "card", label: "Card", confidence: 0.88, why: "Standardowa karta SLDS" }
+        {
+          id: "media_object",
+          label: "Media Object",
+          confidence: 0.92,
+          why: "Obrazek po lewej i treść po prawej",
+        },
+        { id: "card", label: "Card", confidence: 0.88, why: "Standardowa karta SLDS" },
       ],
       html,
-      tokens: ["slds-card","slds-card__body","slds-card__body_inner","slds-media","slds-media__figure","slds-media__body","slds-grid","slds-wrap","slds-size_1-of-1","slds-medium-size_1-of-2","slds-large-size_1-of-3","slds-button","slds-button_brand","slds-truncate","slds-m-right_medium","slds-text-heading_small"],
+      tokens: [
+        "slds-card",
+        "slds-card__body",
+        "slds-card__body_inner",
+        "slds-media",
+        "slds-media__figure",
+        "slds-media__body",
+        "slds-grid",
+        "slds-wrap",
+        "slds-size_1-of-1",
+        "slds-medium-size_1-of-2",
+        "slds-large-size_1-of-3",
+        "slds-button",
+        "slds-button_brand",
+        "slds-truncate",
+        "slds-m-right_medium",
+        "slds-text-heading_small",
+      ],
       a11y: [
         { id: "image-alt", level: "must", status: "pass", message: "Obrazek ma atrybut alt" },
-        { id: "heading-hierarchy", level: "should", status: "pass", message: "Nagłówek w h2" }
+        { id: "heading-hierarchy", level: "should", status: "pass", message: "Nagłówek w h2" },
       ],
       explanation: {
         decisions: [
           { choice: "Wzorzec media object", justification: "Kanoniczny dla obrazek+treść" },
-          { choice: "Padding large (~24px)", justification: "Skala SLDS 16/24; 20px wymaga custom CSS" }
+          {
+            choice: "Padding large (~24px)",
+            justification: "Skala SLDS 16/24; 20px wymaga custom CSS",
+          },
         ],
-        limitations: ["Brak dokładnego 20px w skali SLDS"]
+        limitations: ["Brak dokładnego 20px w skali SLDS"],
       },
       customCss: [
-        { selector: ".my-card .slds-card__body_inner", declaration: "padding: 20px;", reason: "Wymaganie użytkownika" }
+        {
+          selector: ".my-card .slds-card__body_inner",
+          declaration: "padding: 20px;",
+          reason: "Wymaganie użytkownika",
+        },
       ],
-      preview: { breakpoints: [ { id: "mobile", width: 360 }, { id: "tablet", width: 768 }, { id: "desktop", width: 1200 } ] }
-    }
+      preview: {
+        breakpoints: [
+          { id: "mobile", width: 360 },
+          { id: "tablet", width: 768 },
+          { id: "desktop", width: 1200 },
+        ],
+      },
+    },
   };
 
   res.status(200).json(response);

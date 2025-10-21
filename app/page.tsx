@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
+
 import PromptInput from "@/components/PromptInput";
 import ResultTabs from "@/components/ResultTabs";
+import type { GenerationResult } from "@/types/types";
 
 export default function HomePage() {
-  const [result, setResult] = useState<any>(null);
+  const [result, setResult] = useState<GenerationResult | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -30,8 +32,9 @@ export default function HomePage() {
               if (!res.ok || json.error)
                 throw new Error(json?.error?.message || "Błąd generowania");
               setResult(json.result);
-            } catch (e: any) {
-              setError(e.message);
+            } catch (err: unknown) {
+              const message = err instanceof Error ? err.message : "Unexpected error";
+              setError(message);
             } finally {
               setLoading(false);
             }

@@ -8,7 +8,7 @@ export default function PromptInput({
   loading?: boolean;
 }) {
   const [text, setText] = useState(
-    "Chcę kartę z tytułem, przyciskiem i obrazkiem po lewej. Karta responsywna, padding ok. 20px, pojedynczo wyrównana do lewej."
+    "Chcę kartę z tytułem, przyciskiem i obrazkiem po lewej. Karta responsywna, padding ok. 20px, pojedynczo wyrównana do lewej.",
   );
 
   return (

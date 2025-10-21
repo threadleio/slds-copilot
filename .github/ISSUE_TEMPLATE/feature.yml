@@ -1,7 +1,7 @@
 name: Feature Request
 description: Propozycja nowej funkcjonalności
 title: "feat: [krótki opis]"
-labels: ["type:feature","P2-medium"]
+labels: ["type:feature", "P2-medium"]
 body:
   - type: input
     id: summary

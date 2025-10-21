@@ -3,6 +3,7 @@
 Przeglądarkowa appka, która na podstawie promptu generuje HTML + klasy SLDS, podgląd i uzasadnienia.
 
 ## Szybki start
+
 ```bash
 npm i
 npm run dev
@@ -10,6 +11,7 @@ npm run dev
 ```
 
 ## Narzędzia
+
 - Next.js + React
 - Tailwind (UI), Prism (highlight)
 - SLDS (CDN) w sandboxie podglądu
@@ -18,5 +20,6 @@ npm run dev
 - GitHub Actions (CI)
 
 ## Husky
+
 Po `npm i` wykona się `npm run prepare`, które instaluje hooki.
 Pre-commit uruchamia `lint-staged` (Prettier + ESLint na zmienionych plikach).

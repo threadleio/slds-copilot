@@ -1,7 +1,7 @@
 name: Bug Report
 description: Zgłoszenie błędu
 title: "fix: [krótki opis]"
-labels: ["type:bug","P1-high"]
+labels: ["type:bug", "P1-high"]
 body:
   - type: textarea
     id: steps

@@ -1,7 +1,7 @@
 name: Chore
 description: Zadanie techniczne (refaktoryzacja, aktualizacja)
 title: "chore: [krótki opis]"
-labels: ["type:chore","P3-low"]
+labels: ["type:chore", "P3-low"]
 body:
   - type: input
     id: summary
