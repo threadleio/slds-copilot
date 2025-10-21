@@ -1,0 +1,22 @@
+name: Bug Report
+description: Zgłoszenie błędu
+title: "fix: [krótki opis]"
+labels: ["type:bug","P1-high"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: Kroki do odtworzenia
+      placeholder: "1. Wejdź na stronę X\n2. Kliknij Y\n3. ..."
+  - type: textarea
+    id: expected
+    attributes:
+      label: Oczekiwane zachowanie
+  - type: textarea
+    id: actual
+    attributes:
+      label: Aktualne zachowanie
+  - type: input
+    id: env
+    attributes:
+      label: Środowisko (browser, OS, wersja)

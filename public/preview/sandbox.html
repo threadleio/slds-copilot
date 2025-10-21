@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Preview Sandbox</title>
+    <!-- SLDS CSS (CDN) -->
+    <link rel="stylesheet" href="https://lightningdesignsystem.com/assets/styles/salesforce-lightning-design-system.min.css" />
+    <style>
+      body { padding: 16px; background:#f8fafc; }
+      .my-card .slds-card__body_inner { padding: 20px; }
+    </style>
+  </head>
+  <body>
+    <div id="mount"></div>
+    <script>
+      (function(){
+        try {
+          const encoded = location.hash?.slice(1) || "";
+          const html = decodeURIComponent(encoded);
+          document.getElementById("mount").innerHTML = html;
+        } catch(e) {
+          document.getElementById("mount").innerHTML = '<p style="color:#b91c1c">Błąd renderu podglądu.</p>';
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+Title,Body,Labels
+Setup repo: Next.js + Tailwind + Typescript,Inicjalizacja projektu i podstawowej struktury katalogów,"type:chore,P1-high"
+Add SLDS preview sandbox,Dodaj public/preview/sandbox.html + załaduj SLDS z CDN,"type:feature,P1-high"
+Implement PromptInput,"Textarea, przycisk Generuj, stan loading, walidacja pustego promptu","type:feature,P2-medium"
+API mock: POST /api/generate,"Zwraca JSON zgodny z /docs/API_SCHEMA.md (result.html, explanation, a11y itd.)","type:feature,P1-high"
+ResultTabs + HtmlOutput + PreviewFrame + ExplanationPanel,"Trzy panele: kod, podgląd, uzasadnienie; kopiowanie kodu; iframe sandbox","type:feature,P1-high"
+ESLint + Prettier + Husky pre-commit,"Konfiguracja lint-staged, reguł, hooka pre-commit","type:chore,P1-high"
+CI: GitHub Actions,Workflow: install → lint → typecheck → build dla main/develop i PR,"type:chore,P1-high"
+Readme + Quickstart,Instrukcja uruchomienia lokalnie i opis narzędzi,"type:doc,P2-medium"

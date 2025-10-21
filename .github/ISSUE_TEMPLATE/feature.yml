@@ -1,0 +1,24 @@
+name: Feature Request
+description: Propozycja nowej funkcjonalności
+title: "feat: [krótki opis]"
+labels: ["type:feature","P2-medium"]
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Opis funkcjonalności
+      placeholder: "Krótki opis celu lub działania"
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Kryteria akceptacji
+      description: Lista zadań / testów akceptacyjnych
+      placeholder: "- [ ] funkcja A\n- [ ] funkcja B"
+  - type: input
+    id: estimate
+    attributes:
+      label: Estymacja (Story Points)
+  - type: input
+    id: release
+    attributes:
+      label: Docelowy release (np. MVP, v1.0)
