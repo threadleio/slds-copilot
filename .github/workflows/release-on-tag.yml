@@ -6,7 +6,7 @@ on:
       - "v*"
 
 permissions:
-  contents: write   # potrzebne do utworzenia GitHub Release
+  contents: write # potrzebne do utworzenia GitHub Release
 
 jobs:
   release:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # żeby changelog miał dostęp do całej historii
+          fetch-depth: 0 # żeby changelog miał dostęp do całej historii
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -45,7 +45,7 @@ jobs:
         uses: mikepenz/release-changelog-builder-action@v5
         with:
           configuration: .github/release-changelog-builder-config.json
-          fromTag: ${{ github.event.before }}   # fallback, ale action i tak znajdzie poprzedni tag
+          fromTag: ${{ github.event.before }} # fallback, ale action i tak znajdzie poprzedni tag
           toTag: ${{ github.ref_name }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
